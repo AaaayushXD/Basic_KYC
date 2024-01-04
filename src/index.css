@@ -1,0 +1,22 @@
+@import "tailwindcss/base";
+@import "tailwindcss/components";
+@import "tailwindcss/utilities";
+
+@layer {
+  ::-webkit-scrollbar {
+    width: 0;
+  }
+
+  body {
+    font-family: "Poppins", sans-serif;
+    overflow-x: hidden;
+  }
+  .login {
+    background: rgba(14, 14, 14, 0.35);
+    box-shadow: 0 8px 32px 0 rgba(87, 87, 87, 0.37);
+    backdrop-filter: blur(8px);
+    -webkit-backdrop-filter: blur(8px);
+    border-radius: 10px;
+    border: 1px solid rgba(255, 255, 255, 0.18);
+  }
+}
