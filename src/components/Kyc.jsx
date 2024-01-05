@@ -1,4 +1,4 @@
-import { collection, addDoc, query, setDoc, where } from "firebase/firestore";
+import { collection, addDoc, query, where } from "firebase/firestore";
 import { useAuth } from "../firebase/Auth";
 import { db, storage } from "../firebase/base";
 import { useEffect, useState } from "react";
@@ -93,7 +93,7 @@ export const Kyc = () => {
   const submitForm = async (ev) => {
     ev.preventDefault();
     try {
-      await setDoc(collection(db, "kyc"), {
+      await addDoc(collection(db, "kyc"), {
         uid: currentUser.user.uid,
         ...userData,
       });
